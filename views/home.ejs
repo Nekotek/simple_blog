@@ -1,0 +1,8 @@
+<%- include("./partials/header") -%>
+<h1>Home</h1>
+<p><%= homeStartingContent %></p>
+<% for(let i = 0; i < postsArray.length; i++){ %>
+  <h3><%= postsArray[i].postTitle %></h3>
+  <p><%= postsArray[i].postText.substring(0,100) + " ... " %><a href='<%= "posts/" + postsArray[i].postTitle.replace(' ', '-').toLowerCase() %>'>Read more</a></p>
+<% } %>
+<%- include("./partials/footer") -%>
